@@ -12,8 +12,14 @@ import {
 export class BooksController {
   @Get()
   @HttpCode(200)
-  getBook() {
+  getBooks() {
     return { nombre: 'get' };
+  }
+
+  @Get(':bookId')
+  @HttpCode(200)
+  getBook() {
+    return `queryEjemploGet`;
   }
 
   @Post()
